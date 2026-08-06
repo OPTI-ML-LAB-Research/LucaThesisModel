@@ -1,0 +1,43 @@
+{
+  "task": "T29B-fix two-class OOD (AA-only model, before retrain)",
+  "n_id_low_mineral": 973,
+  "n_ood_mineral_rich": 973,
+  "mc_samples": 50,
+  "weights": {
+    "recon": 0.6,
+    "var": 0.4
+  },
+  "calibration": {
+    "recon_p95": 0.05930779129266739,
+    "var_p95": 0.018751950934529305,
+    "score_p95_threshold": 0.8019195199012756
+  },
+  "AUROC_ood_score": 0.9935129271417692,
+  "AUROC_recon_error": 0.9946616191116994,
+  "tpr_at_threshold": 0.9907502569373073,
+  "fpr_at_threshold": 0.051387461459403906,
+  "ood_score": {
+    "low_mineral": {
+      "mean": 0.5558962821960449,
+      "median": 0.5312857627868652
+    },
+    "mineral_rich": {
+      "mean": 0.985149621963501,
+      "median": 1.0
+    }
+  },
+  "recon_cosine": {
+    "low_mineral": {
+      "mean": 0.9714917540550232,
+      "median": 0.9769143462181091
+    },
+    "mineral_rich": {
+      "mean": 0.5006566047668457,
+      "median": 0.48837482929229736
+    }
+  },
+  "sources": {
+    "aa_spectra": "data\\processed\\spectra_full.pt",
+    "ckpt": "checkpoints/best.pt"
+  }
+}

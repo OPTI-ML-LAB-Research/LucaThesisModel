@@ -1,0 +1,12 @@
+{
+  "calibration": {
+    "recon_p95": 0.08137467503547668,
+    "var_p95": 0.019495442509651184,
+    "score_p95": 0.9201678037643433,
+    "n_calibration_samples": 540,
+    "recon_weight": 0.6,
+    "var_weight": 0.4,
+    "mc_samples": 30
+  },
+  "threshold_percentile": 95.0
+}

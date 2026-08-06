@@ -1,0 +1,35 @@
+02:54:18 train INFO | Loaded base config: configs\default.yaml
+02:54:18 train INFO | Loaded train config: configs\train_config.yaml
+02:54:18 train INFO | Device: cpu
+02:54:18 train INFO | Loaded 4378 spectra, 6 compounds
+02:54:18 train INFO | Split sizes: train=3298, val=540, test=540
+02:54:18 train INFO | Augmentation ENABLED: shift+/-6px, scale=(0.9, 1.1), noise_sigma=0.005
+02:54:18 train INFO | Model params: backbone=963,488 head=33,670 recon=6 total=997,164
+02:54:20 train INFO | Starting training: 50 epochs, early-stop patience=8
+02:54:32 train INFO | epoch 000 | lr=9.99e-04 | train mae=0.0819 loss=46.5286 | val mae=0.0850 loss=0.2170 | best=0.0850 * | 12.4s
+02:54:42 train INFO | epoch 001 | lr=9.96e-04 | train mae=0.0576 loss=27.1689 | val mae=0.0832 loss=0.2074 | best=0.0832 * | 9.9s
+02:54:52 train INFO | epoch 002 | lr=9.91e-04 | train mae=0.0544 loss=20.2279 | val mae=0.0639 loss=0.1719 | best=0.0639 * | 9.9s
+02:55:02 train INFO | epoch 003 | lr=9.84e-04 | train mae=0.0513 loss=16.7288 | val mae=0.0724 loss=0.1733 | best=0.0639  | 10.0s
+02:55:14 train INFO | epoch 004 | lr=9.76e-04 | train mae=0.0502 loss=14.3616 | val mae=0.0618 loss=0.1668 | best=0.0618 * | 11.3s
+02:55:25 train INFO | epoch 005 | lr=9.65e-04 | train mae=0.0495 loss=12.4908 | val mae=0.0608 loss=0.1624 | best=0.0608 * | 11.0s
+02:55:36 train INFO | epoch 006 | lr=9.52e-04 | train mae=0.0503 loss=10.9151 | val mae=0.0696 loss=0.1688 | best=0.0608  | 11.1s
+02:55:47 train INFO | epoch 007 | lr=9.38e-04 | train mae=0.0484 loss=9.5538 | val mae=0.0602 loss=0.1417 | best=0.0602 * | 11.3s
+02:55:58 train INFO | epoch 008 | lr=9.22e-04 | train mae=0.0477 loss=8.3671 | val mae=0.0576 loss=0.1486 | best=0.0576 * | 10.5s
+02:56:09 train INFO | epoch 009 | lr=9.05e-04 | train mae=0.0471 loss=7.3319 | val mae=0.0703 loss=0.1775 | best=0.0576  | 11.5s
+02:56:21 train INFO | epoch 010 | lr=8.85e-04 | train mae=0.0487 loss=6.4249 | val mae=0.0738 loss=0.1583 | best=0.0576  | 11.4s
+02:56:32 train INFO | epoch 011 | lr=8.65e-04 | train mae=0.0473 loss=5.6274 | val mae=0.0534 loss=0.1445 | best=0.0534 * | 11.0s
+02:56:43 train INFO | epoch 012 | lr=8.42e-04 | train mae=0.0462 loss=4.9258 | val mae=0.0466 loss=0.1234 | best=0.0466 * | 11.2s
+02:56:55 train INFO | epoch 013 | lr=8.19e-04 | train mae=0.0463 loss=4.3213 | val mae=0.0552 loss=0.1494 | best=0.0466  | 11.7s
+02:57:06 train INFO | epoch 014 | lr=7.94e-04 | train mae=0.0462 loss=3.7941 | val mae=0.0739 loss=0.1503 | best=0.0466  | 11.4s
+02:57:17 train INFO | epoch 015 | lr=7.68e-04 | train mae=0.0459 loss=3.3312 | val mae=0.0731 loss=0.1535 | best=0.0466  | 11.2s
+02:57:29 train INFO | epoch 016 | lr=7.41e-04 | train mae=0.0464 loss=2.9377 | val mae=0.0528 loss=0.1391 | best=0.0466  | 12.1s
+02:57:41 train INFO | epoch 017 | lr=7.13e-04 | train mae=0.0464 loss=2.5894 | val mae=0.0594 loss=0.1584 | best=0.0466  | 11.1s
+02:57:52 train INFO | epoch 018 | lr=6.84e-04 | train mae=0.0467 loss=2.2969 | val mae=0.0574 loss=0.1458 | best=0.0466  | 11.1s
+02:58:03 train INFO | epoch 019 | lr=6.55e-04 | train mae=0.0463 loss=2.0391 | val mae=0.0768 loss=0.1759 | best=0.0466  | 11.4s
+02:58:14 train INFO | epoch 020 | lr=6.25e-04 | train mae=0.0464 loss=1.8211 | val mae=0.0493 loss=0.1224 | best=0.0466  | 10.9s
+02:58:14 train INFO | Early stop: no improvement for 8 epochs (best val_mae=0.0466)
+02:58:14 train INFO | Done. Best val MAE = 0.0466
+02:58:14 train INFO | Best checkpoint:    checkpoints/best.pt
+02:58:14 train INFO | Last checkpoint:    checkpoints/last.pt
+02:58:14 train INFO | Training log CSV:   results/training_log.csv
+02:58:14 train INFO | Next step: run T17 mid-checkpoint evaluation in Chat 2.

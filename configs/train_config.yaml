@@ -1,0 +1,80 @@
+# configs/train_config.yaml
+# Training-specific hyperparameters. Loaded by src/training/train.py and
+# merged on top of configs/default.yaml (this file's keys win).
+#
+# Defaults follow Custom Instructions Section 5 except:
+#   * optimizer: changed adam -> adamw (proper weight-decay decoupling;
+#     model05.py used AdamW successfully on this dataset).
+#   * scheduler: kept plain cosine (NOT warm-restarts) for the 50-epoch
+#     budget; warm-restart period T_0=10 doesn't add value at this depth.
+
+paths:
+  # Inputs (built by scripts/prepare_data.py)
+  spectra_cache:       "data/processed/spectra_full.pt"   # (N, P) float32
+  labels_cache:        "data/processed/labels.pt"         # (N, 6) float32
+  vial_ids_cache:      "data/processed/vial_ids.npy"      # (N,) string
+  wavenumbers:         "data/processed/wavenumbers.npy"   # (P,) float64
+  reference_spectra:   "engine/reference_spectra.npy"     # (6, P) float32
+
+  # Splits (built by Phase A T07)
+  split_train_val_test: "data/splits/split_A_composition_ood.json"
+
+  # Outputs
+  checkpoints_dir:     "checkpoints"
+  checkpoint_best:     "checkpoints/best.pt"
+  checkpoint_last:     "checkpoints/last.pt"
+  training_log_csv:    "results/training_log.csv"
+  loss_curve_png:      "results/figures/training_curves.png"
+
+data:
+  spectrum_length: 1024
+  batch_size: 64
+  num_workers: 0           # Windows: keep 0 to avoid spawn issues; bump to 2-4 on Linux
+  augmentation:
+    enabled: true
+    shift_max_px: 6        # ~10 cm-1 on AA grid (1.7 cm-1/pixel)
+    intensity_range: [0.9, 1.1]
+    noise_sigma: 0.002
+    shift_p: 0.5
+    scale_p: 0.5
+    noise_p: 0.5
+
+model:
+  feature_dim: 256
+  dropout_rate: 0.2        # for MC Dropout (T18) and during training
+
+training:
+  optimizer: adamw         # (model05 used AdamW; safer than Adam for L2)
+  learning_rate: 1.0e-3
+  weight_decay: 1.0e-5     # Custom Instructions value (low; combined_loss has its own gamma*L2)
+  betas: [0.9, 0.999]
+  scheduler: cosine        # plain CosineAnnealingLR, T_max = epochs
+  scheduler_eta_min: 1.0e-6
+
+  epochs: 50
+  early_stopping_patience: 15    # epochs of no val MAE improvement -> stop
+  early_stopping_min_delta: 1.0e-5
+
+  grad_clip_norm: 1.0      # safety net; model05 didn't use this but it's cheap
+
+loss:
+  alpha_quant: 1.0
+  beta_phys: 0.2
+  gamma_reg: 0.01          # for L2 over model params
+  lambda_cosine: 0.3       # inside physics_loss
+  per_compound_weights: [0.94, 1.14, 0.88, 1.02, 1.13, 0.89]
+
+logging:
+  log_every_n_batches: 50
+  validate_every_n_epochs: 1
+  use_wandb: false         # Phase 2 default OFF (deferred per CHAT2 handover)
+  wandb_project: "raman-physics-ai"
+  wandb_run_name: null     # auto from timestamp if null
+  use_tqdm: true
+
+reproducibility:
+  seed: 42
+  deterministic_cudnn: false   # true -> slower but bit-exact across runs
+
+device:
+  prefer: "auto"    # "cuda" | "cpu" | "auto"

@@ -1,0 +1,33 @@
+# =============================================================
+# Model architecture configuration
+# =============================================================
+
+backbone:
+  type: "resnet1d"
+  in_channels: 1
+  feature_dim: 256
+  num_blocks: [2, 2, 2, 2]        # ResNet-18 style depth pattern
+  base_channels: 32
+  kernel_size: 7
+  stride_initial: 2
+  pool: "global_avg"
+
+quantification_head:
+  hidden_dim: 128
+  num_classes: 6                  # must match compounds.num_classes in default.yaml
+  output_activation: "softmax"    # ensures simplex constraint Σα_i = 1
+  use_layernorm: true
+
+reconstruction:
+  # s_recon = Σ (α_i * scale_i * pure_i)
+  # scale_i: per-compound learnable scalar (or fixed 1.0)
+  learnable_scale: true
+  scale_init: 1.0
+  scale_min: 0.1
+  scale_max: 10.0
+
+uncertainty:
+  method: "mc_dropout"
+  dropout_rate: 0.2
+  mc_samples_train: 1             # standard forward during training
+  mc_samples_inference: 50        # for predictive variance at test time

@@ -1,0 +1,108 @@
+{
+  "task": "T31b confusion với thang/trọng số/threshold tùy chỉnh",
+  "n_id_true": 973,
+  "n_ood_true": 973,
+  "calibration": {
+    "recon_p95": 0.05930779129266739,
+    "var_p95": 0.018751950934529305,
+    "score_p95": 0.8019195199012756
+  },
+  "configs": [
+    {
+      "config": {
+        "name": "chốt demo (user)",
+        "scale": "tanh (bão hòa mềm)",
+        "recon_w": 0.7,
+        "var_w": 0.3,
+        "threshold": 0.8
+      },
+      "confusion": {
+        "TP": 0,
+        "TN": 973,
+        "FP": 0,
+        "FN": 973,
+        "n_total": 1946,
+        "n_correct": 973,
+        "n_wrong": 973,
+        "metrics": {
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "recall_tpr": 0.0,
+          "specificity": 0.999999999999999,
+          "fpr": 0.0,
+          "f1": 0.0
+        }
+      },
+      "score_stats": {
+        "id_mean": 0.2809800547663916,
+        "id_median": 0.2595004129927005,
+        "ood_mean": 0.6902319302671935,
+        "ood_median": 0.6999999550064773
+      }
+    },
+    {
+      "config": {
+        "name": "F1-optimal (từ T32)",
+        "scale": "tanh (bão hòa mềm)",
+        "recon_w": 0.6,
+        "var_w": 0.4,
+        "threshold": 0.528306142063416
+      },
+      "confusion": {
+        "TP": 936,
+        "TN": 956,
+        "FP": 17,
+        "FN": 37,
+        "n_total": 1946,
+        "n_correct": 1892,
+        "n_wrong": 54,
+        "metrics": {
+          "accuracy": 0.9722507708119219,
+          "precision": 0.9821615949632728,
+          "recall_tpr": 0.9619732785200401,
+          "specificity": 0.9825282631038016,
+          "fpr": 0.01747173689619731,
+          "f1": 0.9719626168224295
+        }
+      },
+      "score_stats": {
+        "id_mean": 0.24084004694262143,
+        "id_median": 0.2224289254223147,
+        "ood_mean": 0.5916273688004515,
+        "ood_median": 0.5999999614341234
+      }
+    },
+    {
+      "config": {
+        "name": "cũ (clip 0.6/0.4, score_p95)",
+        "scale": "clip (gốc repo)",
+        "recon_w": 0.6,
+        "var_w": 0.4,
+        "threshold": 0.8019195199012756
+      },
+      "confusion": {
+        "TP": 0,
+        "TN": 973,
+        "FP": 0,
+        "FN": 973,
+        "n_total": 1946,
+        "n_correct": 973,
+        "n_wrong": 973,
+        "metrics": {
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "recall_tpr": 0.0,
+          "specificity": 0.999999999999999,
+          "fpr": 0.0,
+          "f1": 0.0
+        }
+      },
+      "score_stats": {
+        "id_mean": 0.2639735730686419,
+        "id_median": 0.23355097141534434,
+        "ood_mean": 0.5969252389778128,
+        "ood_median": 0.6
+      }
+    }
+  ]
+}

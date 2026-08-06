@@ -1,0 +1,47 @@
+# =============================================================
+# Default configuration — Raman Physics-Informed AI MVP
+#
+# This file is the single source of truth for:
+#   - global paths
+#   - random seed
+#   - compound list & ordering
+#   - dataset wavenumber metadata
+#
+# Task-specific overrides live in:
+#   - configs/data_config.yaml
+#   - configs/model_config.yaml
+#   - configs/train_config.yaml
+# =============================================================
+
+project:
+  name: raman-physics-ai
+  version: "0.1.0.dev0"
+  seed: 42
+
+# --- Compound list (order is the canonical label order, columns 1026-1031 of data.csv) ---
+compounds:
+  short_names:  [Ala,    Asn,        Asp,             Glu,             His,        GlcN]
+  full_names:   [Alanine, Asparagine, "Aspartic Acid", "Glutamic Acid", Histidine,  Glucosamine]
+  num_classes:  6
+
+# --- Wavenumber axis ---
+# IMPORTANT: column headers in data.csv are WAVELENGTHS (nm), not wavenumbers.
+# Range 801.62–931.28 nm → after Raman shift conversion ≈ 270–2000 cm⁻¹ (fingerprint region).
+# The dataloader auto-detects spectral columns and converts via:
+#   wavenumber_cm_inv = (1/laser_wl_nm − 1/wavelength_nm) × 1e7
+wavenumber:
+  laser_wavelength_nm: 784.815734863281   # excitation laser (from old project / instrument calibration)
+  source_columns_are: "wavelength_nm"     # "wavelength_nm" | "wavenumber_cm_inv"
+  expected_num_points: 1024               # validated at runtime; loader will warn on mismatch
+
+# --- Global paths (relative to project root) ---
+paths:
+  data_raw_csv:        "data/raw/data.csv"
+  data_processed_dir:  "data/processed"
+  data_splits_dir:     "data/splits"
+  data_reference_dir:  "data/reference"
+  bond_mapping_json:   "engine/bond_mapping.json"
+  reference_spectra:   "engine/reference_spectra.npy"
+  checkpoints_dir:     "checkpoints"
+  results_dir:         "results"
+  logs_dir:            "results/logs"

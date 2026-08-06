@@ -1,0 +1,26 @@
+{
+  "task": "T29E AAM post-retrain test (7 outputs)",
+  "n_samples": 973,
+  "n_low_mineral": 0,
+  "n_mineral_rich": 973,
+  "mae_overall": 0.012576975859701633,
+  "mae_per_compound": {
+    "Alanine": 0.00557327875867486,
+    "Asparagine": 0.011488300748169422,
+    "Aspartic Acid": 0.01787593774497509,
+    "Glutamic Acid": 0.006198041141033173,
+    "Histidine": 0.01139175146818161,
+    "Glucosamine": 0.0056108091957867146,
+    "Minerals": 0.029900701716542244
+  },
+  "recon_cosine": {
+    "all_mean": 0.6048126816749573,
+    "all_median": 0.6199527382850647,
+    "low_mineral_mean": null,
+    "mineral_rich_mean": 0.6048126816749573
+  },
+  "mae_minerals_split": {
+    "low_mineral": null,
+    "mineral_rich": 0.02990070730447769
+  }
+}

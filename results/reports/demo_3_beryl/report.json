@@ -1,0 +1,200 @@
+{
+  "sample_id": "Beryl (Beryl_01 (12).txt)",
+  "timestamp": "2026-05-30 16:47:58 UTC",
+  "composition": {
+    "Alanine": {
+      "mean": 0.0474369153380394,
+      "std": 0.011375724337995052,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "agreement: absent"
+    },
+    "Asparagine": {
+      "mean": 0.24406586587429047,
+      "std": 0.01758255437016487,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Aspartic Acid": {
+      "mean": 0.224483460187912,
+      "std": 0.014596757479012012,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Glutamic Acid": {
+      "mean": 0.22368942201137543,
+      "std": 0.013360985554754734,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Histidine": {
+      "mean": 0.10167457908391953,
+      "std": 0.016739074140787125,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Glucosamine": {
+      "mean": 0.15864969789981842,
+      "std": 0.010875390842556953,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    }
+  },
+  "physics": {
+    "reconstruction_cosine_sim": 0.07013405552078833,
+    "predictive_entropy": 1.6836657524108887,
+    "mean_compound_std": 0.01408841460943222
+  },
+  "ood": {
+    "score": 0.8912304128127968,
+    "is_ood": false,
+    "threshold": 0.9201678037643433,
+    "components": {
+      "recon_norm": 1.0,
+      "var_norm": 0.7280760320319922
+    }
+  },
+  "peaks": [
+    {
+      "position": 323.84167101753314,
+      "intensity": 0.9593958495454425,
+      "fwhm": 15.023328805263475,
+      "fit_quality": 0.9887720618911434,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 398.70108153666445,
+      "intensity": 1.3595487543221825,
+      "fwhm": 17.589011507353362,
+      "fit_quality": 0.9981274144777385,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 687.7157312014401,
+      "intensity": 5.923546239915397,
+      "fwhm": 19.635899675160854,
+      "fit_quality": 0.9996524719462668,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 1017.0351223946055,
+      "intensity": 0.7865987241886732,
+      "fwhm": 21.275552898326403,
+      "fit_quality": 0.9379169576361788,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 1071.1173559950864,
+      "intensity": 7.980569893152708,
+      "fwhm": 24.7305362147775,
+      "fit_quality": 0.9993916186125383,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    }
+  ],
+  "symbolic_head": {
+    "likely_compounds": [],
+    "votes": {
+      "Alanine": 0.0,
+      "Asparagine": 0.0,
+      "Aspartic Acid": 0.0,
+      "Glutamic Acid": 0.0,
+      "Histidine": 0.0,
+      "Glucosamine": 0.0
+    },
+    "unsupported": [
+      "Alanine",
+      "Asparagine",
+      "Aspartic Acid",
+      "Glucosamine",
+      "Glutamic Acid",
+      "Histidine"
+    ]
+  },
+  "novelty": {
+    "unknown_peaks": [
+      {
+        "position": 323.84167101753314,
+        "intensity": 0.9593958495454425,
+        "fwhm": 15.023328805263475,
+        "fit_quality": 0.9887720618911434
+      },
+      {
+        "position": 398.70108153666445,
+        "intensity": 1.3595487543221825,
+        "fwhm": 17.589011507353362,
+        "fit_quality": 0.9981274144777385
+      },
+      {
+        "position": 687.7157312014401,
+        "intensity": 5.923546239915397,
+        "fwhm": 19.635899675160854,
+        "fit_quality": 0.9996524719462668
+      },
+      {
+        "position": 1017.0351223946055,
+        "intensity": 0.7865987241886732,
+        "fwhm": 21.275552898326403,
+        "fit_quality": 0.9379169576361788
+      },
+      {
+        "position": 1071.1173559950864,
+        "intensity": 7.980569893152708,
+        "fwhm": 24.7305362147775,
+        "fit_quality": 0.9993916186125383
+      }
+    ],
+    "n_clusters": 5,
+    "hints": [
+      "cluster centroid 324 cm-1 (1 peak, span 0 cm-1): lattice / skeletal modes, metal-X / heavy-atom stretches  --  inorganic phonons (MoS2 E2g ~380, A1g ~408); metal-O stretches; framework breathing; M-S, M-O, M-Cl, M-N inorganic stretches; skeletal deformation",
+      "cluster centroid 399 cm-1 (1 peak, span 0 cm-1): lattice / skeletal modes, metal-X / heavy-atom stretches  --  inorganic phonons (MoS2 E2g ~380, A1g ~408); metal-O stretches; framework breathing; M-S, M-O, M-Cl, M-N inorganic stretches; skeletal deformation",
+      "cluster centroid 688 cm-1 (1 peak, span 0 cm-1): C-S, C-X bend; ring deformation  --  thiols, halogenated alkanes, aromatic ring deformation",
+      "cluster centroid 1017 cm-1 (1 peak, span 0 cm-1): C-C / C-O stretch  --  alkane C-C; alcohols / ethers C-O; sugar pyranose ring; P-O",
+      "cluster centroid 1071 cm-1 (1 peak, span 0 cm-1): C-C / C-O stretch  --  alkane C-C; alcohols / ethers C-O; sugar pyranose ring; P-O"
+    ]
+  },
+  "metadata": {
+    "model_path": "checkpoints\\best.pt",
+    "n_mc_samples": 30,
+    "spectrum_length": 1024,
+    "n_peaks_detected": 5,
+    "n_peaks_matched": 0,
+    "compound_order": [
+      "Alanine",
+      "Asparagine",
+      "Aspartic Acid",
+      "Glutamic Acid",
+      "Histidine",
+      "Glucosamine"
+    ]
+  }
+}

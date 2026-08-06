@@ -1,0 +1,27 @@
+{
+  "task": "T29B AAM zero-shot test (AA-only model)",
+  "n_samples": 973,
+  "n_low_mineral": 0,
+  "n_mineral_rich": 973,
+  "mc_samples": 50,
+  "recon_cosine": {
+    "low_mineral": {
+      "mean": null,
+      "median": null
+    },
+    "mineral_rich": {
+      "mean": 0.5020739168162092,
+      "median": 0.4899365805840772
+    }
+  },
+  "ood_score": {
+    "low_mineral": {
+      "mean": null,
+      "median": null
+    },
+    "mineral_rich": {
+      "mean": 0.9836094491585438,
+      "median": 1.0
+    }
+  }
+}

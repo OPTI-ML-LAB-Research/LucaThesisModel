@@ -1,0 +1,219 @@
+{
+  "sample_id": "demo_3_real_mos2",
+  "timestamp": "2026-05-21 09:02:12 UTC",
+  "composition": {
+    "Alanine": {
+      "mean": 0.11204290390014648,
+      "std": 0.011469599790871143,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Asparagine": {
+      "mean": 0.16841888427734375,
+      "std": 0.012162820436060429,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Aspartic Acid": {
+      "mean": 0.19622422754764557,
+      "std": 0.012358360923826694,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Glutamic Acid": {
+      "mean": 0.2868914008140564,
+      "std": 0.015246601775288582,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Histidine": {
+      "mean": 0.08678723126649857,
+      "std": 0.011890489608049393,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    },
+    "Glucosamine": {
+      "mean": 0.14963535964488983,
+      "std": 0.009958078153431416,
+      "ground_truth": null,
+      "symbolic_vote": 0.0,
+      "cross_check": "learned-only"
+    }
+  },
+  "physics": {
+    "reconstruction_cosine_sim": 0.13440215001682287,
+    "predictive_entropy": 1.7194045782089233,
+    "mean_compound_std": 0.012180991470813751
+  },
+  "ood": {
+    "score": 0.8526313576908349,
+    "is_ood": false,
+    "threshold": 0.9201678037643433,
+    "components": {
+      "recon_norm": 1.0,
+      "var_norm": 0.6315783942270872
+    }
+  },
+  "peaks": [
+    {
+      "position": 282.8090563849251,
+      "intensity": 0.9940371019074163,
+      "fwhm": 12.34773638415298,
+      "fit_quality": 0.9296707195469988,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 339.5871753074412,
+      "intensity": 0.963953332274828,
+      "fwhm": 21.75270792138712,
+      "fit_quality": 0.8134054721158304,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 372.6625266239419,
+      "intensity": 3.5654598693178583,
+      "fwhm": 19.824435696928248,
+      "fit_quality": 0.9757472418864782,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 403.4524558718349,
+      "intensity": 6.305453544202667,
+      "fwhm": 17.694928053966933,
+      "fit_quality": 0.994691187392033,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 817.835844229035,
+      "intensity": 5.784134921178355,
+      "fwhm": 24.08567269329633,
+      "fit_quality": 0.9981714284666754,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    },
+    {
+      "position": 988.5561903706927,
+      "intensity": 3.457093005874694,
+      "fwhm": 16.511355233156745,
+      "fit_quality": 0.8077120301008669,
+      "matched_to": null,
+      "bond": null,
+      "compounds": [],
+      "discriminative_for": [],
+      "match_confidence": "none",
+      "delta_cm": null
+    }
+  ],
+  "symbolic_head": {
+    "likely_compounds": [],
+    "votes": {
+      "Alanine": 0.0,
+      "Asparagine": 0.0,
+      "Aspartic Acid": 0.0,
+      "Glutamic Acid": 0.0,
+      "Histidine": 0.0,
+      "Glucosamine": 0.0
+    },
+    "unsupported": [
+      "Alanine",
+      "Asparagine",
+      "Aspartic Acid",
+      "Glucosamine",
+      "Glutamic Acid",
+      "Histidine"
+    ]
+  },
+  "novelty": {
+    "unknown_peaks": [
+      {
+        "position": 282.8090563849251,
+        "intensity": 0.9940371019074163,
+        "fwhm": 12.34773638415298,
+        "fit_quality": 0.9296707195469988
+      },
+      {
+        "position": 339.5871753074412,
+        "intensity": 0.963953332274828,
+        "fwhm": 21.75270792138712,
+        "fit_quality": 0.8134054721158304
+      },
+      {
+        "position": 372.6625266239419,
+        "intensity": 3.5654598693178583,
+        "fwhm": 19.824435696928248,
+        "fit_quality": 0.9757472418864782
+      },
+      {
+        "position": 403.4524558718349,
+        "intensity": 6.305453544202667,
+        "fwhm": 17.694928053966933,
+        "fit_quality": 0.994691187392033
+      },
+      {
+        "position": 817.835844229035,
+        "intensity": 5.784134921178355,
+        "fwhm": 24.08567269329633,
+        "fit_quality": 0.9981714284666754
+      },
+      {
+        "position": 988.5561903706927,
+        "intensity": 3.457093005874694,
+        "fwhm": 16.511355233156745,
+        "fit_quality": 0.8077120301008669
+      }
+    ],
+    "n_clusters": 6,
+    "hints": [
+      "cluster centroid 283 cm-1 (1 peak, span 0 cm-1): lattice / skeletal modes  --  inorganic phonons (MoS2 E2g ~380, A1g ~408); metal-O stretches; framework breathing",
+      "cluster centroid 340 cm-1 (1 peak, span 0 cm-1): lattice / skeletal modes, metal-X / heavy-atom stretches  --  inorganic phonons (MoS2 E2g ~380, A1g ~408); metal-O stretches; framework breathing; M-S, M-O, M-Cl, M-N inorganic stretches; skeletal deformation",
+      "cluster centroid 373 cm-1 (1 peak, span 0 cm-1): lattice / skeletal modes, metal-X / heavy-atom stretches  --  inorganic phonons (MoS2 E2g ~380, A1g ~408); metal-O stretches; framework breathing; M-S, M-O, M-Cl, M-N inorganic stretches; skeletal deformation",
+      "cluster centroid 403 cm-1 (1 peak, span 0 cm-1): metal-X / heavy-atom stretches  --  M-S, M-O, M-Cl, M-N inorganic stretches; skeletal deformation",
+      "cluster centroid 818 cm-1 (1 peak, span 0 cm-1): ring / skeletal stretches  --  alkane C-C, ring breathing of aromatics / heterocycles",
+      "cluster centroid 989 cm-1 (1 peak, span 0 cm-1): C-C / C-O stretch  --  alkane C-C; alcohols / ethers C-O; sugar pyranose ring; P-O"
+    ]
+  },
+  "metadata": {
+    "model_path": "checkpoints\\best.pt",
+    "n_mc_samples": 50,
+    "spectrum_length": 1024,
+    "n_peaks_detected": 6,
+    "n_peaks_matched": 0,
+    "compound_order": [
+      "Alanine",
+      "Asparagine",
+      "Aspartic Acid",
+      "Glutamic Acid",
+      "Histidine",
+      "Glucosamine"
+    ]
+  }
+}

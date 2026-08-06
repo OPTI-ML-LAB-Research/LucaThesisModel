@@ -1,0 +1,77 @@
+[
+  {
+    "name": "PCA+SVM",
+    "metrics": {
+      "quant_mae": 0.04792169344626005,
+      "ident_accuracy": 0.4981481481481482,
+      "recon_cosine_median": null,
+      "constraint_violation_rate": null,
+      "per_compound_mae": [
+        0.060488136806596836,
+        0.06048695696427144,
+        0.046468778679186695,
+        0.041973981911430806,
+        0.032875883711528,
+        0.04523642260454664
+      ]
+    },
+    "inference_seconds": 0.04896720001124777,
+    "inference_per_sample_ms": 0.0906800000208292,
+    "meta": {
+      "pca_n_components": 50,
+      "pca_variance_explained": 0.9939615726470947,
+      "svr_kernel": "rbf",
+      "svr_C": 1.0,
+      "svr_gamma": "scale",
+      "n_train": 3298,
+      "train_seconds": 0.4556513999996241,
+      "sklearn_version": "1.8.0",
+      "feature_dim_in": 1024
+    }
+  },
+  {
+    "name": "ResNet-only (no physics)",
+    "metrics": {
+      "quant_mae": 0.04624551996232275,
+      "ident_accuracy": 0.5055555555555555,
+      "recon_cosine_median": null,
+      "constraint_violation_rate": null,
+      "per_compound_mae": [
+        0.043684449046850204,
+        0.05666228011250496,
+        0.06711907684803009,
+        0.04890014976263046,
+        0.029321735724806786,
+        0.03178541362285614
+      ]
+    },
+    "inference_seconds": 1.2613215000019409,
+    "inference_per_sample_ms": 2.33578055555915,
+    "meta": {
+      "epoch": 9,
+      "val_mae": 0.03609723225235939
+    }
+  },
+  {
+    "name": "Ours (physics-informed)",
+    "metrics": {
+      "quant_mae": 0.05495190294459462,
+      "ident_accuracy": 0.42592592592592593,
+      "recon_cosine_median": 0.9698039274848547,
+      "constraint_violation_rate": 0.0,
+      "per_compound_mae": [
+        0.05876632034778595,
+        0.07090575248003006,
+        0.03307021036744118,
+        0.049679651856422424,
+        0.05147369205951691,
+        0.0658157616853714
+      ]
+    },
+    "inference_seconds": null,
+    "inference_per_sample_ms": null,
+    "meta": {
+      "source": "results\\midcheckpoint_predictions.npz"
+    }
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "task": "T31 paired per-sample ID/OOD count (AA=ID, AAM=OOD)",
+  "n_id_true": 973,
+  "n_ood_true": 973,
+  "n_total": 1946,
+  "mineral_threshold": 0.05,
+  "weights": {
+    "recon": 0.6,
+    "var": 0.4
+  },
+  "mc_samples": 30,
+  "models": [
+    {
+      "name": "AA-only (before retrain)",
+      "ckpt": "checkpoints/best.pt",
+      "n_compounds": 6,
+      "threshold": 0.7981892824172974,
+      "threshold_source": "calibrated_score_p95",
+      "confusion": {
+        "TP": 962,
+        "TN": 924,
+        "FP": 49,
+        "FN": 11
+      },
+      "n_total": 1946,
+      "n_correct": 1886,
+      "n_wrong": 60,
+      "metrics": {
+        "accuracy": 0.9691675231243576,
+        "precision": 0.9515331355093957,
+        "recall_tpr": 0.9886947584789301,
+        "specificity": 0.9496402877697832,
+        "fpr": 0.05035971223021577,
+        "f1": 0.9697580645161286
+      },
+      "score_stats": {
+        "id": {
+          "mean": 0.5470241904258728,
+          "median": 0.5215602517127991
+        },
+        "ood": {
+          "mean": 0.980615496635437,
+          "median": 1.0
+        }
+      }
+    },
+    {
+      "name": "AAM-retrained (after retrain)",
+      "ckpt": "checkpoints/aam_retrained_v2/best.pt",
+      "n_compounds": 7,
+      "threshold": 0.89832603931427,
+      "threshold_source": "calibrated_score_p95",
+      "confusion": {
+        "TP": 326,
+        "TN": 925,
+        "FP": 48,
+        "FN": 647
+      },
+      "n_total": 1946,
+      "n_correct": 1251,
+      "n_wrong": 695,
+      "metrics": {
+        "accuracy": 0.6428571428571429,
+        "precision": 0.8716577540106928,
+        "recall_tpr": 0.33504624871531313,
+        "specificity": 0.9506680369989713,
+        "fpr": 0.0493319630010277,
+        "f1": 0.48403860430586454
+      },
+      "score_stats": {
+        "id": {
+          "mean": 0.5329729318618774,
+          "median": 0.4940618872642517
+        },
+        "ood": {
+          "mean": 0.8504859209060669,
+          "median": 0.874646008014679
+        }
+      }
+    }
+  ],
+  "sources": {
+    "aa_spectra": "data\\processed\\spectra_full.pt",
+    "aam_dir": "data\\processed\\aam"
+  }
+}

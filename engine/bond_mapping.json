@@ -1,0 +1,449 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "n_entries": 30,
+    "sources": [
+      "De Gelder et al. 2007 — Reference database of Raman spectra of biological molecules",
+      "Socrates 2001 — Infrared and Raman Characteristic Group Frequencies, 3rd ed",
+      "Custom Instructions §8 (Histidine imidazole peaks; Glucosamine pyranose peaks)"
+    ],
+    "compound_order": [
+      "Alanine",
+      "Asparagine",
+      "Aspartic Acid",
+      "Glutamic Acid",
+      "Histidine",
+      "Glucosamine"
+    ],
+    "notes": "Tolerances are conservative; some entries (e.g. shared COO- stretch) deliberately mark multiple compounds. Use the discriminative_for field to pick the most identity-bearing peaks."
+  },
+  "entries": [
+    {
+      "id": "P001",
+      "wavenumber_cm_inv": 850,
+      "tolerance_cm_inv": 6,
+      "bond": "C-COO- symmetric stretch / C-CH3 stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Alanine"
+      ],
+      "discriminative_for": [
+        "Alanine"
+      ],
+      "notes": "Side-chain CH3 rocking + C-COO- mode; reasonably specific to Alanine in our 6-compound panel."
+    },
+    {
+      "id": "P002",
+      "wavenumber_cm_inv": 894,
+      "tolerance_cm_inv": 6,
+      "bond": "C-COO- symmetric stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Alanine"
+      ],
+      "discriminative_for": [
+        "Alanine"
+      ],
+      "notes": "Strong Alanine marker; less prominent in other amino acids."
+    },
+    {
+      "id": "P003",
+      "wavenumber_cm_inv": 1000,
+      "tolerance_cm_inv": 8,
+      "bond": "C-C / C-N skeletal stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Alanine",
+        "Histidine"
+      ],
+      "discriminative_for": [],
+      "notes": "Generic backbone mode; non-discriminative on its own."
+    },
+    {
+      "id": "P004",
+      "wavenumber_cm_inv": 1003,
+      "tolerance_cm_inv": 8,
+      "bond": "Imidazole ring breathing",
+      "mode": "breathing",
+      "compounds": [
+        "Histidine"
+      ],
+      "discriminative_for": [
+        "Histidine"
+      ],
+      "notes": "Strongest Histidine marker; imidazole ring breathing mode. Tolerance widened from 4 to 8 to accommodate instrument calibration drift (Zarei 2023 / Wasatch WP-785) observed in real mixture spectra."
+    },
+    {
+      "id": "P005",
+      "wavenumber_cm_inv": 1080,
+      "tolerance_cm_inv": 8,
+      "bond": "C-O stretch / pyranose ring",
+      "mode": "stretch",
+      "compounds": [
+        "Glucosamine"
+      ],
+      "discriminative_for": [
+        "Glucosamine"
+      ],
+      "notes": "Pyranose ring C-O stretch; primary Glucosamine fingerprint. Tolerance widened from 6 to 8 to accommodate instrument calibration drift (Zarei 2023 / Wasatch WP-785) observed in real mixture spectra."
+    },
+    {
+      "id": "P006",
+      "wavenumber_cm_inv": 1100,
+      "tolerance_cm_inv": 8,
+      "bond": "C-N stretch / pyranose ring",
+      "mode": "stretch",
+      "compounds": [
+        "Glucosamine"
+      ],
+      "discriminative_for": [
+        "Glucosamine"
+      ],
+      "notes": "Glucosamine amine + pyranose ring mode; co-occurs with P005. Tolerance widened from 6 to 8 to accommodate instrument calibration drift (Zarei 2023 / Wasatch WP-785) observed in real mixture spectra."
+    },
+    {
+      "id": "P007",
+      "wavenumber_cm_inv": 1130,
+      "tolerance_cm_inv": 8,
+      "bond": "C-N stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Alanine",
+        "Asparagine",
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Generic C-N stretch shared across alpha amino acids."
+    },
+    {
+      "id": "P008",
+      "wavenumber_cm_inv": 1180,
+      "tolerance_cm_inv": 8,
+      "bond": "Imidazole C-N stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Histidine"
+      ],
+      "discriminative_for": [
+        "Histidine"
+      ],
+      "notes": "Histidine imidazole ring secondary marker. Tolerance widened from 5 to 8 to accommodate instrument calibration drift (Zarei 2023 / Wasatch WP-785) observed in real mixture spectra."
+    },
+    {
+      "id": "P009",
+      "wavenumber_cm_inv": 1265,
+      "tolerance_cm_inv": 8,
+      "bond": "Amide III (N-H bend + C-N stretch)",
+      "mode": "bend+stretch",
+      "compounds": [
+        "Asparagine"
+      ],
+      "discriminative_for": [
+        "Asparagine"
+      ],
+      "notes": "Asparagine side-chain amide group; weaker in non-amide aa."
+    },
+    {
+      "id": "P010",
+      "wavenumber_cm_inv": 1340,
+      "tolerance_cm_inv": 8,
+      "bond": "CH2 wag",
+      "mode": "bend",
+      "compounds": [
+        "Asparagine",
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Methylene wag shared by side-chain bearing amino acids."
+    },
+    {
+      "id": "P011",
+      "wavenumber_cm_inv": 1410,
+      "tolerance_cm_inv": 10,
+      "bond": "COO- symmetric stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Alanine",
+        "Asparagine",
+        "Aspartic Acid",
+        "Glutamic Acid",
+        "Histidine"
+      ],
+      "discriminative_for": [],
+      "notes": "Carboxylate symmetric stretch; present in all carboxylate-bearing aa. Pan-aa marker."
+    },
+    {
+      "id": "P012",
+      "wavenumber_cm_inv": 1450,
+      "tolerance_cm_inv": 8,
+      "bond": "CH2/CH3 scissor + NH3+ deformation",
+      "mode": "bend",
+      "compounds": [
+        "Alanine",
+        "Asparagine",
+        "Aspartic Acid",
+        "Glutamic Acid",
+        "Histidine",
+        "Glucosamine"
+      ],
+      "discriminative_for": [],
+      "notes": "Broad pan-organic band; non-discriminative."
+    },
+    {
+      "id": "P013",
+      "wavenumber_cm_inv": 1495,
+      "tolerance_cm_inv": 8,
+      "bond": "Imidazole C=N / C-C ring stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Histidine"
+      ],
+      "discriminative_for": [
+        "Histidine"
+      ],
+      "notes": "Histidine imidazole ring marker (tertiary). Tolerance widened from 6 to 8 to accommodate instrument calibration drift (Zarei 2023 / Wasatch WP-785) observed in real mixture spectra."
+    },
+    {
+      "id": "P014",
+      "wavenumber_cm_inv": 1575,
+      "tolerance_cm_inv": 8,
+      "bond": "Imidazole C=C / C=N stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Histidine"
+      ],
+      "discriminative_for": [
+        "Histidine"
+      ],
+      "notes": "Histidine imidazole ring marker (quaternary); strongest at high pH. Tolerance widened from 6 to 8 to accommodate instrument calibration drift (Zarei 2023 / Wasatch WP-785) observed in real mixture spectra."
+    },
+    {
+      "id": "P015",
+      "wavenumber_cm_inv": 1620,
+      "tolerance_cm_inv": 10,
+      "bond": "C=O / C=C stretch (asymmetric carboxylate)",
+      "mode": "stretch",
+      "compounds": [
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Asymmetric COO- stretch; stronger in di-carboxylic side chains."
+    },
+    {
+      "id": "P016",
+      "wavenumber_cm_inv": 1660,
+      "tolerance_cm_inv": 10,
+      "bond": "Amide I (C=O stretch)",
+      "mode": "stretch",
+      "compounds": [
+        "Asparagine"
+      ],
+      "discriminative_for": [
+        "Asparagine"
+      ],
+      "notes": "Side-chain amide C=O stretch (Amide I region); distinguishes Asn from Asp."
+    },
+    {
+      "id": "P017",
+      "wavenumber_cm_inv": 1700,
+      "tolerance_cm_inv": 12,
+      "bond": "COOH C=O stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Free carboxylic acid C=O (only at low pH); side-chain COOH marker."
+    },
+    {
+      "id": "P018",
+      "wavenumber_cm_inv": 540,
+      "tolerance_cm_inv": 10,
+      "bond": "COO- bend / C-N-C bend",
+      "mode": "bend",
+      "compounds": [
+        "Alanine",
+        "Asparagine",
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Skeletal bend in low-wavenumber region; weak overall."
+    },
+    {
+      "id": "P019",
+      "wavenumber_cm_inv": 760,
+      "tolerance_cm_inv": 8,
+      "bond": "COO- wag",
+      "mode": "bend",
+      "compounds": [
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Carboxylate wagging mode; weak."
+    },
+    {
+      "id": "P020",
+      "wavenumber_cm_inv": 925,
+      "tolerance_cm_inv": 8,
+      "bond": "C-C-N stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [
+        "Glutamic Acid"
+      ],
+      "notes": "Glutamic acid skeletal mode; reasonably specific."
+    },
+    {
+      "id": "P021",
+      "wavenumber_cm_inv": 950,
+      "tolerance_cm_inv": 6,
+      "bond": "C-COO- stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Aspartic Acid"
+      ],
+      "discriminative_for": [
+        "Aspartic Acid"
+      ],
+      "notes": "Aspartic acid side-chain C-COO- stretch; secondary marker."
+    },
+    {
+      "id": "P022",
+      "wavenumber_cm_inv": 1235,
+      "tolerance_cm_inv": 8,
+      "bond": "Amide III (N-H bend)",
+      "mode": "bend",
+      "compounds": [
+        "Asparagine"
+      ],
+      "discriminative_for": [
+        "Asparagine"
+      ],
+      "notes": "Side-chain amide N-H bend (Amide III); Asparagine-specific in this panel."
+    },
+    {
+      "id": "P023",
+      "wavenumber_cm_inv": 510,
+      "tolerance_cm_inv": 12,
+      "bond": "Ring deformation (imidazole)",
+      "mode": "bend",
+      "compounds": [
+        "Histidine"
+      ],
+      "discriminative_for": [
+        "Histidine"
+      ],
+      "notes": "Low-wavenumber imidazole ring deformation; weak but specific."
+    },
+    {
+      "id": "P024",
+      "wavenumber_cm_inv": 640,
+      "tolerance_cm_inv": 10,
+      "bond": "COO- rocking",
+      "mode": "bend",
+      "compounds": [
+        "Alanine",
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Carboxylate rocking; non-discriminative pan-aa."
+    },
+    {
+      "id": "P025",
+      "wavenumber_cm_inv": 1320,
+      "tolerance_cm_inv": 8,
+      "bond": "CH deformation",
+      "mode": "bend",
+      "compounds": [
+        "Alanine",
+        "Asparagine",
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Aliphatic CH bending; pan-aliphatic."
+    },
+    {
+      "id": "P026",
+      "wavenumber_cm_inv": 1380,
+      "tolerance_cm_inv": 8,
+      "bond": "CH3 symmetric deformation",
+      "mode": "bend",
+      "compounds": [
+        "Alanine"
+      ],
+      "discriminative_for": [
+        "Alanine"
+      ],
+      "notes": "Alanine CH3 symmetric deformation; useful supporting marker."
+    },
+    {
+      "id": "P027",
+      "wavenumber_cm_inv": 1300,
+      "tolerance_cm_inv": 8,
+      "bond": "CH2 twist",
+      "mode": "bend",
+      "compounds": [
+        "Asparagine",
+        "Aspartic Acid",
+        "Glutamic Acid"
+      ],
+      "discriminative_for": [],
+      "notes": "Side-chain methylene twist; pan-side-chain-bearing aa."
+    },
+    {
+      "id": "P028",
+      "wavenumber_cm_inv": 1040,
+      "tolerance_cm_inv": 6,
+      "bond": "C-OH bend / C-O stretch",
+      "mode": "stretch",
+      "compounds": [
+        "Glucosamine"
+      ],
+      "discriminative_for": [
+        "Glucosamine"
+      ],
+      "notes": "Glucosamine hydroxyl mode; tertiary marker for the sugar."
+    },
+    {
+      "id": "P029",
+      "wavenumber_cm_inv": 1455,
+      "tolerance_cm_inv": 8,
+      "bond": "NH3+ asymmetric deformation",
+      "mode": "bend",
+      "compounds": [
+        "Alanine",
+        "Asparagine",
+        "Aspartic Acid",
+        "Glutamic Acid",
+        "Histidine",
+        "Glucosamine"
+      ],
+      "discriminative_for": [],
+      "notes": "Protonated amine deformation; pan-amine. Overlaps P012."
+    },
+    {
+      "id": "P030",
+      "wavenumber_cm_inv": 1530,
+      "tolerance_cm_inv": 10,
+      "bond": "Amide II (N-H bend + C-N stretch)",
+      "mode": "bend+stretch",
+      "compounds": [
+        "Asparagine"
+      ],
+      "discriminative_for": [
+        "Asparagine"
+      ],
+      "notes": "Asparagine side-chain Amide II; co-marker with P016."
+    }
+  ]
+}

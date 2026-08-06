@@ -1,0 +1,50 @@
+{
+  "compound_order": [
+    "Alanine",
+    "Asparagine",
+    "Aspartic Acid",
+    "Glutamic Acid",
+    "Histidine",
+    "Glucosamine"
+  ],
+  "source_files": {
+    "Alanine": "DL-alanine.csv",
+    "Asparagine": "L-asparagine.csv",
+    "Aspartic Acid": "L-aspartic-acid.csv",
+    "Glutamic Acid": "L-glutamic-acid.csv",
+    "Histidine": "L-histidine.csv",
+    "Glucosamine": "D-glucosamine-HCl.csv"
+  },
+  "n_spectra_per_compound": {
+    "Alanine": 10,
+    "Asparagine": 10,
+    "Aspartic Acid": 10,
+    "Glutamic Acid": 10,
+    "Histidine": 10,
+    "Glucosamine": 10
+  },
+  "aggregation_method_per_compound": {
+    "Alanine": "mean",
+    "Asparagine": "mean",
+    "Aspartic Acid": "mean",
+    "Glutamic Acid": "mean",
+    "Histidine": "mean",
+    "Glucosamine": "mean"
+  },
+  "preprocessing_applied": true,
+  "resampled_to_target_grid": true,
+  "target_grid_path": "data\\processed\\wavenumbers.npy",
+  "n_pixels_output": 1024,
+  "intensity_balance": {
+    "per_compound_total_intensity": {
+      "Alanine": -4.973799150320701e-14,
+      "Asparagine": 1.4210854715202004e-14,
+      "Aspartic Acid": 0.0,
+      "Glutamic Acid": 1.4210854715202004e-14,
+      "Histidine": -4.973799150320701e-14,
+      "Glucosamine": -1.1368683772161603e-13
+    },
+    "max_min_ratio": Infinity,
+    "warning": true
+  }
+}

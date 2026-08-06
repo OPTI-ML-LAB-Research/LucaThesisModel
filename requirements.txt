@@ -1,0 +1,44 @@
+# ============================================================
+# Raman Physics-Informed AI MVP — Python dependencies
+# Python 3.10 recommended
+# Generated: Day 1 of 14-day MVP sprint
+# ============================================================
+
+# --- Core scientific stack ---
+numpy>=1.24.0,<2.0.0
+scipy>=1.10.0,<2.0.0
+pandas>=2.0.0,<3.0.0
+scikit-learn>=1.3.0,<2.0.0
+
+# --- Deep learning (PyTorch) ---
+# NOTE: For CUDA support on Windows, install PyTorch SEPARATELY first following
+# https://pytorch.org/get-started/locally/  (then run: pip install -r requirements.txt)
+# Example CPU install (default):  pip install torch torchvision
+# Example CUDA 12.1:              pip install torch==2.2.0 torchvision==0.17.0 --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0.0,<3.0.0
+torchvision>=0.15.0,<1.0.0
+
+# --- Spectroscopy / signal processing ---
+lmfit>=1.2.0,<2.0.0              # Voigt / pseudo-Voigt peak fitting
+pybaselines>=1.0.0,<2.0.0        # Asymmetric Least Squares baseline correction
+
+# --- Visualization ---
+matplotlib>=3.7.0,<4.0.0
+seaborn>=0.12.0,<1.0.0
+plotly>=5.15.0,<6.0.0            # interactive plots (optional)
+
+# --- Configuration & experiment tracking ---
+pyyaml>=6.0.0,<7.0.0
+tensorboard>=2.13.0,<3.0.0
+wandb>=0.15.0,<1.0.0              # OPTIONAL: comment out if not using W&B
+
+# --- Testing ---
+pytest>=7.4.0,<9.0.0
+pytest-cov>=4.1.0,<6.0.0
+
+# --- Utility ---
+tqdm>=4.65.0,<5.0.0
+ipykernel>=6.25.0,<7.0.0          # for Jupyter notebooks
+
+# --- Optional: dashboard (Day 13 stretch) ---
+streamlit>=1.28.0,<2.0.0

@@ -1,0 +1,80 @@
+# =============================================================
+# Data configuration
+# =============================================================
+
+dataloader:
+  batch_size: 64
+  num_workers: 4                  # set to 0 on Windows if you hit issues
+  pin_memory: true
+  shuffle_train: true
+  drop_last_train: false
+
+split:
+  # Which split scheme to use:
+  #   "A"        — composition-level OOD: 42/6/6 vials -> train/val/test (default per project spec)
+  #   "A_prime"  — sample-level random:   60/20/20 fraction (less rigorous OOD, more data)
+  #   "B"        — component-level OOD: hold out all mixtures containing one compound
+  #   "all"      — generate ALL THREE splits side-by-side (used for black-box comparison study)
+  scheme: "all"
+
+  # When scheme="all", outputs are written to data/splits/{A,A_prime,B}.json.
+  # Train/eval scripts then pick which one(s) to use via their own config.
+
+  # Should pure samples (vial # = 'L-histidine', 'D-glucosamine', etc.) be INCLUDED in the
+  # train/val/test split?  Discussion in T03 notes:
+  #   true  → the model also learns to recognize pure spectra (e.g. composition = [0,0,0,0,1,0]).
+  #           Recommended: prevents OOD scorer from flagging every pure spectrum as novel.
+  #   false → pure spectra are reserved exclusively for engine/reference_spectra.npy.
+  # NOTE: regardless of this flag, scripts/extract_pure_references.py always uses
+  # the pure spectra to build the reference tensor — that pipeline is independent.
+  include_pure_in_split: true
+
+  # For scheme A (composition-level):
+  A:
+    num_train_vials: 42
+    num_val_vials: 6
+    num_test_vials: 6
+    seed: 42
+
+  # For scheme A' (sample-level):
+  A_prime:
+    train_frac: 0.60
+    val_frac:   0.20
+    test_frac:  0.20
+    seed: 42
+
+  # For scheme B (component-level OOD).
+  # ⚠ NOTE: with the current dataset every compound appears in 49/54 vials,
+  #   so any single-compound holdout reduces the train pool to ~5 vials.
+  #   Scheme B is therefore documented but not recommended as a primary
+  #   evaluation protocol on this dataset; treat its outputs as a stress-test.
+  B:
+    holdout_compound: "Histidine"
+    val_frac_within_train_pool: 0.15        # fraction of non-holdout vials reserved for val
+    seed: 42
+
+augmentation:
+  enabled: true
+  random_shift_cm_inv: 10         # ±10 cm⁻¹ peak shift (simulates instrument drift)
+  intensity_scale_range: [0.9, 1.1]
+  gaussian_noise_sigma: 0.005     # additive noise on normalized spectra
+  apply_prob: 0.5                 # per-augmentation independent application probability
+
+preprocessing:
+  # If true, the dataloader applies the classical pipeline on-the-fly.
+  # If false, expects pre-cached tensors in data/processed/ (built by
+  # scripts/prepare_data.py).
+  apply_on_the_fly: false
+
+  # ── Keys below are forwarded directly to src.data.preprocess.preprocess_pipeline ──
+
+  cosmic_threshold: 5.0           # std-multiplier above median |Δ| for cosmic-ray detection
+
+  asls_lam: 1.0e+5                # smoothness parameter (Eilers AsLS)
+  asls_p:   0.01                  # asymmetry parameter
+  asls_max_iter: 30
+
+  savgol_window: 11               # must be odd
+  savgol_polyorder: 3
+
+  snv_eps: 1.0e-8                 # numerical floor on std

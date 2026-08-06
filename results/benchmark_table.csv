@@ -1,0 +1,34 @@
+model,metric,value
+PCA+SVM,quant_mae,0.04792169344626005
+PCA+SVM,ident_accuracy,0.4981481481481482
+PCA+SVM,recon_cosine_median,
+PCA+SVM,constraint_violation_rate,
+PCA+SVM,inference_per_sample_ms,0.0906800000208292
+PCA+SVM,mae_Alanine,0.060488136806596836
+PCA+SVM,mae_Asparagine,0.06048695696427144
+PCA+SVM,mae_Aspartic Acid,0.046468778679186695
+PCA+SVM,mae_Glutamic Acid,0.041973981911430806
+PCA+SVM,mae_Histidine,0.032875883711528
+PCA+SVM,mae_Glucosamine,0.04523642260454664
+ResNet-only (no physics),quant_mae,0.04624551996232275
+ResNet-only (no physics),ident_accuracy,0.5055555555555555
+ResNet-only (no physics),recon_cosine_median,
+ResNet-only (no physics),constraint_violation_rate,
+ResNet-only (no physics),inference_per_sample_ms,2.33578055555915
+ResNet-only (no physics),mae_Alanine,0.043684449046850204
+ResNet-only (no physics),mae_Asparagine,0.05666228011250496
+ResNet-only (no physics),mae_Aspartic Acid,0.06711907684803009
+ResNet-only (no physics),mae_Glutamic Acid,0.04890014976263046
+ResNet-only (no physics),mae_Histidine,0.029321735724806786
+ResNet-only (no physics),mae_Glucosamine,0.03178541362285614
+Ours (physics-informed),quant_mae,0.05495190294459462
+Ours (physics-informed),ident_accuracy,0.42592592592592593
+Ours (physics-informed),recon_cosine_median,0.9698039274848547
+Ours (physics-informed),constraint_violation_rate,0.0
+Ours (physics-informed),inference_per_sample_ms,
+Ours (physics-informed),mae_Alanine,0.05876632034778595
+Ours (physics-informed),mae_Asparagine,0.07090575248003006
+Ours (physics-informed),mae_Aspartic Acid,0.03307021036744118
+Ours (physics-informed),mae_Glutamic Acid,0.049679651856422424
+Ours (physics-informed),mae_Histidine,0.05147369205951691
+Ours (physics-informed),mae_Glucosamine,0.0658157616853714
